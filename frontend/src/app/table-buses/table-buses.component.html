@@ -1,0 +1,31 @@
+<div style="justify-self: center;">
+  <div class="input-group" class="form-control">
+    <input #input mdbInput type="search" />
+    <button type="button" class="btn btn-primary" (click)="search(input.value)">Search </button>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Bus</th>
+        <th>Destination</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Speed(MPH)</th>
+        <th>Distance(mi)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dt of busData">
+        <td><span>{{dt.vid}}</span></td>
+        <td><span>{{dt.des}}</span></td>
+        <td><span>{{dt.lat}}</span></td>
+        <td><span>{{dt.lon}}</span></td>
+        <td><span>{{dt.pdist}}</span></td>
+        <td><span>{{dt.pdist}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
